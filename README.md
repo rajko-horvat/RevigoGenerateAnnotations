@@ -1,5 +1,6 @@
 ﻿## Repository description
-<p>This is the command line utility that generates Species Annotations REVIGO uses to process data and create Similarity Matrix.</p>
+<p>This is the command line utility that generates Species Annotations REVIGO uses to process data and create Similarity Matrix. 
+The utility is computationaly intensive and threaded (parallelized). Be careful when you specify number of cores your CPU has.</p>
 
 ## About REVIGO (REduce + VIsualize Gene Ontology) project
 <p>Outcomes of high-throughput biological experiments are typically interpreted by statistical testing

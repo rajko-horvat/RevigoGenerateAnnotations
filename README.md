@@ -5,11 +5,11 @@ The utility is computationaly intensive and threaded (parallelized). Be careful 
 ## How to compile and run
 You need to obtain the following files to generate REVIGO databases:
 
-* EBI GOA database, ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_gcrp.gaf.gz (Needs to be uncompressed, be careful, uncompressed size exceeds 50GB)
-* NCBI database, ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz (Needs to be uncompressed)
-* Gene Ontology database, http://purl.obolibrary.org/obo/go.obo and https://www.uniprot.org/docs/keywlist.txt in same directory
+* EBI GOA database, <a href="ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_gcrp.gaf.gz">ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_gcrp.gaf.gz</a> (Needs to be uncompressed, be careful, uncompressed size exceeds 50GB),
+* NCBI database, <a href="ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz">ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz</a> (Needs to be uncompressed),
+* Gene Ontology database, <a href="http://purl.obolibrary.org/obo/go.obo">http://purl.obolibrary.org/obo/go.obo</a> and <a href="https://www.uniprot.org/docs/keywlist.txt">https://www.uniprot.org/docs/keywlist.txt</a> have to be in the same directory.
 
-Each directory containing a database also contains link.txt file containing a link to a database. For example EBI GOA link.txt file will contain the following: ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_gcrp.gaf.gz
+Each directory containing a database also contains link.txt file containing a link to a database. For example EBI GOA link.txt file will contain the following: &quot;ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_gcrp.gaf.gz&quot;
 
 After that adjust the paths to the databases and you are ready to go.
 

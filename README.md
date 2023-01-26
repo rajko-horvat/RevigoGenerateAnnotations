@@ -11,7 +11,7 @@ You need to obtain the following files to generate REVIGO databases:
 
 Each directory containing a database also contains link.txt file containing a link to a database. For example EBI GOA link.txt file will contain the following: &quot;ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_gcrp.gaf.gz&quot;
 
-After that adjust the paths to the databases and you are ready to go.
+After that adjust the paths in code to the databases and you are ready to go.
 
 ## About REVIGO (REduce + VIsualize Gene Ontology) project
 <p>Outcomes of high-throughput biological experiments are typically interpreted by statistical testing

@@ -77,8 +77,12 @@ namespace GenerateSpeciesAnnotations
 				@"c:\Revigo\Databases\Taxonomy_NCBI\2022_11_18\names.dmp",
 				aTaxonIDs);
 
-			// serialize GOTermSizes object
-			annotations.Serialize(@"c:\Revigo\Databases\SpeciesAnnotations.xml", false);
+			// serialize Gene Ontology
+			GeneOntology oOntology = new GeneOntology(@"c:\Revigo\Databases\GeneOntology\2022_11_03\go.obo");
+			oOntology.Serialize(@"c:\Revigo\Databases\Current\GeneOntology.xml.gz");
+
+			// serialize Annotation object
+			annotations.Serialize(@"c:\Revigo\Databases\Current\SpeciesAnnotations.xml.gz");
 
 			Console.WriteLine("Finished, press Enter key");
 			Console.ReadLine();

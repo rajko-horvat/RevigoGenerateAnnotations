@@ -38,12 +38,13 @@ namespace GenerateSpeciesAnnotations
 			// which organisms to process
 			int[] aTaxonIDs = new int[] {
 				0,	// whole UniProt (default)
-				// new Mar 2017 - change of TaxIDs to match the UniProt ones in "goa_uniprot_gcrp.gaf.gz"  (note 'gcrp') file
 				3055,	// Chlamydomonas reinhardtii
 				3702,	// Arabidopsis thaliana
-				3827,	// Cicer arietinum - added 2021_07_27
-				4081,	// Solanum lycopersicum	- added 2021_07_23
+				3827,	// Cicer arietinum
+				4081,	// Solanum lycopersicum
 				4577,	// Zea mays
+				5691,	// Trypanosoma brucei *1
+				5693,	// Trypanosoma cruzi *1
 				6239,	// Caenorhabditis elegans
 				7227,	// Drosophila melanogaster
 				7955,	// Danio rerio
@@ -54,35 +55,33 @@ namespace GenerateSpeciesAnnotations
 				10090,	// Mus musculus
 				10116,	// Rattus norvegicus
 				31033,	// Takifugu rubripes
+				34305,	// Lotus japonicus *1
 				36329,	// Plasmodium falciparum
 				39947,	// Oryza sativa
 				44689,	// Dictyostelium discoideum
 				83332,	// Mycobacterium tuberculosis
 				83333,	// Escherichia coli
-				//190650,	// Caulobacter crescentus
 				208964,	// Pseudomonas aeruginosa
 				224308,	// Bacillus subtilis
-				//243273,	// Mycoplasma genitalium
-				//272634,	// Mycoplasma pneumoniae
 				284812,	// Schizosaccharomyces pombe
 				559292,	// Saccharomyces cerevisiae
 				946362, // Salpingoeca rosetta
-				1111708,	// Synechocystis sp.
-				//1413510	// Mycoplasma pneumoniae
+				1111708	// Synechocystis sp.
 			};
+			// (*1) These organisms were added 6.2.2023.
 
 			SpeciesAnnotationsList annotations = SpeciesAnnotationsList.FromGOA(
-				@"c:\Revigo\Databases\EBI_GOA\2022_09_16\goa_uniprot_gcrp.gaf",
-				@"c:\Revigo\Databases\GeneOntology\2022_11_03\go.obo",
-				@"c:\Revigo\Databases\Taxonomy_NCBI\2022_11_18\names.dmp",
+				@"Z:\EBI_GOA\2023_02_03\goa_uniprot_gcrp.gaf",
+				@"Z:\GeneOntology\2023_01_01\go.obo",
+				@"Z:\Taxonomy_NCBI\2023_02_06\names.dmp",
 				aTaxonIDs);
 
 			// serialize Gene Ontology
-			GeneOntology oOntology = new GeneOntology(@"c:\Revigo\Databases\GeneOntology\2022_11_03\go.obo");
-			oOntology.Serialize(@"c:\Revigo\Databases\Current\GeneOntology.xml.gz");
+			GeneOntology oOntology = new GeneOntology(@"Z:\GeneOntology\2023_01_01\go.obo");
+			oOntology.Serialize(@"c:\Revigo\Databases\New\GeneOntology.xml.gz");
 
 			// serialize Annotation object
-			annotations.Serialize(@"c:\Revigo\Databases\Current\SpeciesAnnotations.xml.gz");
+			annotations.Serialize(@"c:\Revigo\Databases\New\SpeciesAnnotations.xml.gz");
 
 			Console.WriteLine("Finished, press Enter key");
 			Console.ReadLine();

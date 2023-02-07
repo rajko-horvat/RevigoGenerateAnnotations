@@ -71,13 +71,13 @@ namespace GenerateSpeciesAnnotations
 			// (*1) These organisms were added 6.2.2023.
 
 			SpeciesAnnotationsList annotations = SpeciesAnnotationsList.FromGOA(
-				@"Z:\EBI_GOA\2023_02_03\goa_uniprot_gcrp.gaf",
-				@"Z:\GeneOntology\2023_01_01\go.obo",
-				@"Z:\Taxonomy_NCBI\2023_02_06\names.dmp",
+				@"C:\Revigo\Databases\EBI_GOA\2023_02_03\goa_uniprot_gcrp.gaf",
+				@"C:\Revigo\Databases\GeneOntology\2023_01_01\go.obo",
+				@"C:\Revigo\Databases\Taxonomy_NCBI\2023_02_06\names.dmp",
 				aTaxonIDs);
 
 			// serialize Gene Ontology
-			GeneOntology oOntology = new GeneOntology(@"Z:\GeneOntology\2023_01_01\go.obo");
+			GeneOntology oOntology = new GeneOntology(@"C:\Revigo\Databases\GeneOntology\2023_01_01\go.obo");
 			oOntology.Serialize(@"c:\Revigo\Databases\New\GeneOntology.xml.gz");
 
 			// serialize Annotation object

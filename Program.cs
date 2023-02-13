@@ -43,8 +43,6 @@ namespace GenerateSpeciesAnnotations
 				3827,	// Cicer arietinum
 				4081,	// Solanum lycopersicum
 				4577,	// Zea mays
-				5691,	// Trypanosoma brucei *1
-				5693,	// Trypanosoma cruzi *1
 				6239,	// Caenorhabditis elegans
 				7227,	// Drosophila melanogaster
 				7955,	// Danio rerio
@@ -55,7 +53,6 @@ namespace GenerateSpeciesAnnotations
 				10090,	// Mus musculus
 				10116,	// Rattus norvegicus
 				31033,	// Takifugu rubripes
-				34305,	// Lotus japonicus *1
 				36329,	// Plasmodium falciparum
 				39947,	// Oryza sativa
 				44689,	// Dictyostelium discoideum
@@ -68,17 +65,17 @@ namespace GenerateSpeciesAnnotations
 				946362, // Salpingoeca rosetta
 				1111708	// Synechocystis sp.
 			};
-			// (*1) These organisms were added 6.2.2023.
+			// (*1) These organisms were added ...
+
+			// serialize Gene Ontology
+			GeneOntology oOntology = new GeneOntology(@"C:\Revigo\Databases\GeneOntology\2023_01_01\go.obo");
+			oOntology.Serialize(@"c:\Revigo\Databases\New\GeneOntology.xml.gz");
 
 			SpeciesAnnotationsList annotations = SpeciesAnnotationsList.FromGOA(
 				@"C:\Revigo\Databases\EBI_GOA\2023_02_03\goa_uniprot_gcrp.gaf",
 				@"C:\Revigo\Databases\GeneOntology\2023_01_01\go.obo",
 				@"C:\Revigo\Databases\Taxonomy_NCBI\2023_02_06\names.dmp",
 				aTaxonIDs);
-
-			// serialize Gene Ontology
-			GeneOntology oOntology = new GeneOntology(@"C:\Revigo\Databases\GeneOntology\2023_01_01\go.obo");
-			oOntology.Serialize(@"c:\Revigo\Databases\New\GeneOntology.xml.gz");
 
 			// serialize Annotation object
 			annotations.Serialize(@"c:\Revigo\Databases\New\SpeciesAnnotations.xml.gz");

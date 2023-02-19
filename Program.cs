@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using IRB.Revigo.Databases;
+using IRB.Revigo.Core.Databases;
 
 namespace GenerateSpeciesAnnotations
 {
@@ -71,7 +69,7 @@ namespace GenerateSpeciesAnnotations
 			GeneOntology oOntology = new GeneOntology(@"C:\Revigo\Databases\GeneOntology\2023_01_01\go.obo");
 			oOntology.Serialize(@"c:\Revigo\Databases\New\GeneOntology.xml.gz");
 
-			SpeciesAnnotationsList annotations = SpeciesAnnotationsList.FromGOA(
+			SpeciesAnnotationList annotations = SpeciesAnnotationList.FromGOA(
 				@"C:\Revigo\Databases\EBI_GOA\2023_02_03\goa_uniprot_gcrp.gaf",
 				@"C:\Revigo\Databases\GeneOntology\2023_01_01\go.obo",
 				@"C:\Revigo\Databases\Taxonomy_NCBI\2023_02_06\names.dmp",

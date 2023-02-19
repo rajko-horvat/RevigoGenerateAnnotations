@@ -1,7 +1,7 @@
 ﻿## Repository description
 <p>This is the command line utility that generates REVIGO main databases used to process data. 
 The utility is computationaly intensive and threaded (parallelized). Be careful when you specify number of cores your CPU has.</p>
-<p>Since a lot of changes had to be made for .NET Core. Official release with binaries is planned for mid February 2023</p>
+<p>Since a lot of changes had to be made for .NET Core API. Official release with binaries is planned for mid March 2023</p>
 
 ## How to compile and run
 <p>You need to obtain the following files to generate REVIGO databases:

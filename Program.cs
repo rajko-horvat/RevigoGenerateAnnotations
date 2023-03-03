@@ -7,7 +7,7 @@ namespace GenerateSpeciesAnnotations
 	/// Utility that generates Species Annotations for the REVIGO
 	/// 
 	/// Authors:
-	/// 	Rajko Horvat (rhorvat at irb.hr)
+	/// 	Rajko Horvat (https://github.com/rajko-horvat)
 	/// 
 	/// License:
 	/// 	MIT

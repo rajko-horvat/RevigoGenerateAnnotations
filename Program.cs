@@ -50,6 +50,7 @@ namespace GenerateSpeciesAnnotations
 				9913,	// Bos taurus
 				10090,	// Mus musculus
 				10116,	// Rattus norvegicus
+				13249,	// Rhodnius prolixus
 				31033,	// Takifugu rubripes
 				36329,	// Plasmodium falciparum
 				39947,	// Oryza sativa
@@ -66,17 +67,17 @@ namespace GenerateSpeciesAnnotations
 			// (*1) These organisms were added ...
 
 			// serialize Gene Ontology
-			GeneOntology oOntology = new GeneOntology(@"C:\Revigo\Databases\GeneOntology\2023_01_01\go.obo");
-			oOntology.Serialize(@"c:\Revigo\Databases\New\GeneOntology.xml.gz");
+			GeneOntology oOntology = new GeneOntology(@"Z:\GeneOntology\2023_05_10\go.obo");
+			oOntology.Serialize(@"C:\Revigo\Databases\New\GeneOntology.xml.gz");
 
 			SpeciesAnnotationList annotations = SpeciesAnnotationList.FromGOA(
-				@"C:\Revigo\Databases\EBI_GOA\2023_02_03\goa_uniprot_gcrp.gaf",
-				@"C:\Revigo\Databases\GeneOntology\2023_01_01\go.obo",
-				@"C:\Revigo\Databases\Taxonomy_NCBI\2023_02_06\names.dmp",
+				@"Z:\EBI_GOA\2023_03_15\goa_uniprot_gcrp.gaf",
+				@"Z:\GeneOntology\2023_05_10\go.obo",
+				@"Z:\Taxonomy_NCBI\2023_05_22\names.dmp",
 				aTaxonIDs);
 
 			// serialize Annotation object
-			annotations.Serialize(@"c:\Revigo\Databases\New\SpeciesAnnotations.xml.gz");
+			annotations.Serialize(@"C:\Revigo\Databases\New\SpeciesAnnotations.xml.gz");
 
 			Console.WriteLine("Finished, press Enter key");
 			Console.ReadLine();
